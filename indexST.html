@@ -1,0 +1,74 @@
+<html>
+<body>
+	<table border="1" align="center" style="background-color: #a3c6c7">
+	<tr>
+		<td>
+			<br>
+<p align="center" style="font-family: calibri;">Details Form</p>    
+<hr>
+<table border="0" cellspacing="5px;" cellpadding="10px;" align="center">
+<div class="container">
+
+<tr><td><label>Name:</label></td> 
+<td><input type="text" id="name"></td>
+<br><br>
+<tr><td><label>Mob.No.:</label></td> 
+<td><input type="text" id="mob"></td>
+<br><br>
+<tr><td><label>Email ID:</label></td> 
+<td><input type="text" id="email"></td>
+</table>
+<br><br>
+<button  onclick="app()" style="margin-left: 120px; font-family: calibri; font-size: 20px; padding-left: 25px; padding-right: 25px; background-color:#d49b39;">SUBMIT</button>
+
+<br><br>
+</td>
+</tr>
+<hr>
+<br><br>
+<tr>
+	<td>
+<div id="display">
+<table width="100%" id="table" style="visibility:hidden" cellspacing="30px;">
+<tr>
+<td>Name</td><td>Mob No.</td><td>Email ID</td>
+</tr>
+
+</table>
+</div>
+
+</div>
+</td>
+</tr>
+</table>
+</body>
+
+<script>
+
+function app()
+{
+var a = document.getElementById("name").value;
+var b = document.getElementById("mob").value;
+var c = document.getElementById("email").value;
+//document.createelement('button')
+var x=document.getElementById('table').insertRow();
+var z1 = x.insertCell(0);
+var z2 = x.insertCell(1);
+var z3 = x.insertCell(2);
+
+z1.innerHTML=a;
+z2.innerHTML=b;
+z3.innerHTML=c;
+
+var p = document.createElement("button");
+var z4 = x.insertCell(3);
+z4.innerHTML = p;
+
+
+document.getElementById("table").style.visibility = "visible";
+document.getElementById("name").value = "";
+document.getElementById("mob").value = "";
+document.getElementById("email").value = ""; 
+}
+</script>
+</html>
